@@ -5,11 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    cursor: none;
 }
 
 .main {
     background-image: url("../images/bg.svg");
-    height: 100vh;
+    height: calc(100vh - 75px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left bottom;
@@ -34,9 +35,10 @@
 
 .hero {
     position: absolute;
-    top: 15vh;
+    top: 7vh;
     left: 20vh;
     color: white;
+    overflow: hidden;
 
     h1 {
         font-size: 5vw;
@@ -56,7 +58,8 @@
         color: $primary;
         font-size: 2rem;
         margin: 2rem 0rem;
-        transition: 1s;
+        transition: background-color 1s, color 1s, border-radius 1s;
+        scale: 1;
 
         &:hover {
             background-color: $primary;
@@ -90,4 +93,27 @@
         text-decoration: none;
         font-size: 1.2rem;
     }
+}
+
+
+@mixin follow-circle ($color, $h, $w) {
+    background-color: lighten($color, 15);
+    height: $h;
+    width: $w;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+}
+
+.circle {
+    @include follow-circle($primary, 50px, 50px);
+    opacity: 0.5;
+}
+
+.tiny {
+    @include follow-circle(white, 15px, 15px)
 }
