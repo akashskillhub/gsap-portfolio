@@ -26,3 +26,8 @@ function dispay(arr, el) {
         `
     }
 }
+
+
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.from(".progress", { width: 0, duration: 2, scrollTrigger: ".progress" })

@@ -8,6 +8,10 @@
     cursor: none;
 }
 
+body {
+    background-color: #eee;
+}
+
 .main {
     background-image: url("../images/bg.svg");
     height: calc(100vh - 75px);
@@ -145,4 +149,40 @@
         flex: 1;
     }
 
+}
+
+.projects {
+    display: flex;
+    padding: 0 5rem;
+    gap: 1rem;
+}
+
+.card {
+    max-width: 25%;
+    border: 2px solid gray;
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin: 1.5rem 0;
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: #555;
+        margin: 1rem 0;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.5rem;
+
+    }
 }
