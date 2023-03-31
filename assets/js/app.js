@@ -44,10 +44,11 @@ tl.from("#cta", {
 gsap.from(".circle", { scale: 0, repeat: -1, yoyo: true, duration: 0.6 })
 
 window.addEventListener("mousemove", function (event) {
-    const x = event.clientX
-    const y = event.clientY
+    const x = event.pageX
+    const y = event.pageY
     gsap.to(".circle", 0.7, { x, y })
     gsap.to(".tiny", 0.2, { x, y })
+
 }
 )
 
